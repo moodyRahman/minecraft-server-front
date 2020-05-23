@@ -50,7 +50,7 @@
 
 	<!-- Begin page content -->
 	<main role="main" class="container">
-		<h1 class="mt-5">
+		<h1 class="jumbotron">
 			minecult.wtf is 
 			{% if server_status %}
 			ONLINE
@@ -59,10 +59,31 @@
 			{% endif %}
 		</h1>
 
-		<form action="/toggle" method="get">
-			<button type="submit" action="/toggle">REEE</button>
-		</form>
+		{% if server_status %}
+			<div class="alert alert-success" role="alert">
+				Uptime remaining: {{time}}
+			</div>
+		{% else %}
+		{% endif %}
+	
+		<button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location = '/cult/toggle'">Turn the server on</button>
+
+		<div class="h3">
+			<br>
+			This page controls the minecult.wtf Minecraft server. 
+			<br> 
+			Click the button to turn on the server for 1 hour. 
+			This page will keep you updated on the status of the server.
+			<br>
+			In-game notifications will update you every 15 minutes as to how much time is left. 
+		</div>
+
 	</main>
+
+
+	<div class="footer">
+		<p>Moody Rahman 2020 --- GNU GENERAL PUBLIC LICENSE</p>
+	</div>
 
 </body>
 
