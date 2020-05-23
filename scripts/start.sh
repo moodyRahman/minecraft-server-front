@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-minecraft_dir="/home/moody/Desktop/server"
-
-ls
+jarname=cat config.json | jq ".jarname"
 
 # lsof -i:25565
 
@@ -17,7 +15,7 @@ echo "THE RETURN CODE OF LSOF: $status"
 
 if [ "$status" == "1" ]
 then
-    screen -S minecraft -p 0 -X stuff "java -jar paper-307.jar nogui\n"
+    screen -S minecraft -p 0 -X stuff "java -jar $jarname nogui\n"
     echo "60" > stat.txt
     sleep 15m
     
