@@ -12,3 +12,11 @@ def index():
 	return render_template("index.html", server_status=server_state)
 
 
+
+if __name__ == "__main__":
+	app.run()
+
+
+
+# p = Popen(["./scripts/start.sh", ""])
+# p.wait()
