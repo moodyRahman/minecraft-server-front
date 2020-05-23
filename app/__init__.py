@@ -1,3 +1,3 @@
-import subprocess
+import os
 
-subprocess.run("cd app; ls")
+os.system('ls -l')
