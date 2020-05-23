@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-jarname=cat config.json | jq ".jarname"
+ls
+cat config.json
+# jarname="$(cat config.json | jq ".jarname")"
+jarname="paper-307.jar"
+
 
 # lsof -i:25565
 
