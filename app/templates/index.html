@@ -1,1 +1,58 @@
-WELCOME TO THE DEMOCRATIC REPUBLIC OF NORTH KOREA
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>minecult.wtf start</title>
+</head>
+<body>
+	<header>
+		{% if server_status %}
+			SERVER IS ONLINE
+		{% else %}
+			SERVER IS OFFLINE
+		{% endif %}
+	</header>
+	<form action="/toggle" method="get">
+	
+		<button type="submit">TURN ON THE SERVER</button>
+	</form>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>minecult ignition</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Begin page content -->
+	<main role="main" class="container">
+		<h1 class="mt-5">
+			minecult.wtf is 
+			{% if server_status %}
+			ONLINE
+			{% else %}
+			OFFLINE
+			{% endif %}
+		</h1>
+
+		<form action="/toggle" method="get">
+			<button type="submit" action="/toggle">REEE</button>
+		</form>
+	</main>
+
+</body>
+
+</html>
