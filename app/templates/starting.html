@@ -6,8 +6,15 @@
 	<title>Redirecting...</title>
 </head>
 <body>
-	
+	<div id="message">
+		Server starting...
+	</div>
+
+	<br>
+	<br>
+
 	<script>
+		var timer = setTimeout(function () { { document.getElementById("message").innerHTML = "Redirecting..." } }, 2000);
 		var timer = setTimeout(function () { { window.location = '/cult' } }, 3000);
 	</script>
 </body>
