@@ -9,7 +9,13 @@ app = Flask(__name__)
 @app.route("/cult")
 def index():
 	server_state = "java" in (p.name() for p in psutil.process_iter())
-	return render_template("index.html", server_status=server_state)
+	# time_left = open("stat.txt", "r").read()
+
+	with open("stat.txt", "r") as f:
+		time_left = f.read()
+		pass
+
+	return render_template("index.html", server_status=server_state, time=time_left)
 
 
 @app.route("/cult/toggle")
