@@ -6,4 +6,9 @@ app = Flask(__name__)
 
 
 
-os.system('./')
+@app.route("/cult")
+def index():
+	server_state = "java" in (p.name() for p in psutil.process_iter())
+	return render_template("index.html", server_status=server_state)
+
+
