@@ -20,14 +20,13 @@ echo "THE RETURN CODE OF LSOF: $status"
 
 if [ "$status" == "1" ]
 then
-    echo "TRUE"
-    cd $minecraft_dir
-    ls
-    java -jar paper-307.jar nogui
+    screen -S minecraft -p 0 -X stuff "java -jar paper-307.jar nogui\n"
+    sleep 120m
+    screen -S minecraft -p 0 -X stuff "stop\n"
 else
     echo "server already running!"
 fi
 
-
+# screen -S minecraft -p 0 -X stuff "stop\n"
 
 # java -jar paper-307.jar nogui
