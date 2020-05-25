@@ -1,12 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-ls
-cat config.json
-# jarname="$(cat config.json | jq ".jarname")"
-jarname="paper-307.jar"
+jarname="paper-283.jar"
 
 
-# lsof -i:25565
+echo "-------------------------"
+echo $PATH
+echo "-------------------------"
 
 lsof -i:25565
 
