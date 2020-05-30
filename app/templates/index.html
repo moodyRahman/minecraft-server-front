@@ -39,8 +39,8 @@
 			left: 0;
 			bottom: 0;
 			width: 100%;
-			background-color:darkturquoise;
-			color:darkblue;
+			background-color: darkturquoise;
+			color: darkblue;
 			text-align: left;
 		}
 	</style>
@@ -48,34 +48,34 @@
 
 <body>
 
+
+
 	<!-- Begin page content -->
 	<main role="main" class="container">
-		<h1 class="jumbotron">
-			minecult.wtf is 
-			{% if server_status %}
-			ONLINE
-			{% else %}
-			OFFLINE
-			{% endif %}
+		<h1 id="status" class="jumbotron">
+			minecult.wtf is: something terrible has happened
 		</h1>
 
-		{% if server_status %}
-			<div class="alert alert-success" role="alert">
-				Uptime remaining: {{time}}
-			</div>
-		{% else %}
-		{% endif %}
-	
-		<button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location = '/cult/toggle'">Turn the server on</button>
+		
+		<div id="timer" style="visibility: hidden;" class="alert alert-success" role="alert">
+			Uptime remaining: N/A
+		</div>
+
+
+
+		<button id="ignite" class="btn btn-primary btn-lg btn-block"
+			onclick="ignite()">
+			Turn the server on
+		</button>
 
 		<div class="h3">
 			<br>
-			This page controls the minecult.wtf Minecraft server. 
-			<br> 
-			Click the button to turn on the server for 1 hour. 
+			This page controls the minecult.wtf Minecraft server.
+			<br>
+			Click the button to turn on the server for 1 hour.
 			This page will keep you updated on the status of the server.
 			<br>
-			In-game notifications will update you every 15 minutes as to how much time is left. 
+			In-game notifications will update you every 15 minutes as to how much time is left.
 		</div>
 
 	</main>
@@ -84,6 +84,9 @@
 	<div class="footer">
 		<p>Moody Rahman 2020 --- GNU GENERAL PUBLIC LICENSE</p>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="/static/update.js"></script>
 
 </body>
 
