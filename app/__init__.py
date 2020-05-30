@@ -20,6 +20,9 @@ def status():
 
 	return {"server_state": server_state, "time_left":time_left}
 
+@app.route("/cult/update.js")
+def js():
+	return app.send_static_file('update.js')
 
 @app.route("/cult/toggle")
 def turnonsever():
