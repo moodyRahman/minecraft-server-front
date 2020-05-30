@@ -23,4 +23,4 @@ The server will automatically shutdown after an hour. Users in-game will have me
 ## Pre-requesites
 - An active screen session titled `minecraft`, with its directory set to the minecraft server directory
   - `screen -d -m -S minecraft`
-  - `screen -S minecraft -p 0 -X stuff "java -jar $jarname nogui\n"`
+  - `screen -S minecraft -p 0 -X stuff "cd your/server/here"`
