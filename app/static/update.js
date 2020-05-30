@@ -31,17 +31,19 @@ update();
 
 setInterval(function(){
 	update();
-}, .5 * 60 * 1000);
+}, 10 * 60 * 1000);
 
 
 var ignite = function(){
 	$.get("/cult/status", function(d){
 		if (!d.server_state){
 			$.get("cult/toggle");
-			ignite_e.disabled = true;
+			draw(
+				{
+					server_state:true, 
+					time_left:60
 		}
-		else {
-			ignite_e.innerHTML = "Server already running"
+			);
 		}
 	});
 }
