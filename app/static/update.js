@@ -5,7 +5,7 @@ ignite_e = document.getElementById("ignite")
 var draw = function(data){
 	console.log(data);
 
-
+	
 	if (data.server_state){
 		ignite_e.disabled = true;
 		status_e.innerHTML = "minecult is online!";
@@ -42,7 +42,7 @@ var ignite = function(){
 				{
 					server_state:true, 
 					time_left:60
-		}
+				}
 			);
 		}
 	});
