@@ -1,92 +1,82 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>minecult.wtf start</title>
-</head>
-<body>
-	<header>
-		{% if server_status %}
-			SERVER IS ONLINE
-		{% else %}
-			SERVER IS OFFLINE
-		{% endif %}
-	</header>
-	<form action="/toggle" method="get">
-	
-		<button type="submit">TURN ON THE SERVER</button>
-	</form>
-</body>
-</html> -->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
 
-	<title>minecult ignition</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<!-- Bootstrap core CSS -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-	<style>
-		.footer {
-			position: fixed;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			background-color: darkturquoise;
-			color: darkblue;
-			text-align: left;
-		}
-	</style>
+  <title>Bare - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="p-5">
+
+  <!-- Navigation -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Minecult Server Ignition</h1>
+        <p class="lead" id="status">The server is OFF</p>
+        <p class="lead" id="timer" style="visibility:hidden;"> x time remaining</p>
+      </div>
+    </div>
+  </div>
 
 
 
-	<!-- Begin page content -->
-	<main role="main" class="container">
-		<h1 id="status" class="jumbotron">
-			minecult.wtf is: something terrible has happened
-		</h1>
 
-		
-		<div id="timer" style="visibility: hidden;" class="alert alert-success" role="alert">
-			Uptime remaining: N/A
-		</div>
+
+  <div class="container">
+    <div class="text-center m-5">
+      <button id="ignite" type="button" class="btn btn-info" onclick="ignite()">Activate the Server</button>
+    </div>
+  </div>
 
 
 
-		<button id="ignite" class="btn btn-primary btn-lg btn-block"
-			onclick="ignite()">
-			activate server
-		</button>
-
-		<div class="h3">
-			<br>
-			This page controls the minecult.wtf Minecraft server.
-			<br>
-			Click the button to turn on the server for 1 hour.
-			This page will keep you updated on the status of the server.
-			<br>
-			In-game notifications will update you every 15 minutes as to how much time is left.
-		</div>
-
-	</main>
+    
+  <!-- Bootstrap core JavaScript -->
+  <!-- <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
 
-	<div class="footer">
-		<p>Moody Rahman 2020 --- GNU GENERAL PUBLIC LICENSE</p>
-	</div>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="cult/update.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="cult/update.js"></script>
 
 </body>
 
